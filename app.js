@@ -97,7 +97,7 @@ if (
         ;
 
         // register fake ServiceWorker for show notification on mobile devices
-        navigator.serviceWorker.register('/firebase-messaging-sw.js');
+        navigator.serviceWorker.register('./firebase-messaging-sw.js');
         Notification.requestPermission(function(permission) {
             if (permission === 'granted') {
                 navigator.serviceWorker.ready.then(function(registration) {
@@ -182,7 +182,7 @@ function getToken() {
 
 
 function sendNotification(notification) {
-    var key = 'AAAAaGQ_q2M:APA91bGCEOduj8HM6gP24w2LEnesqM2zkL_qx2PJUSBjjeGSdJhCrDoJf_WbT7wpQZrynHlESAoZ1VHX9Nro6W_tqpJ3Aw-A292SVe_4Ho7tJQCQxSezDCoJsnqXjoaouMYIwr34vZTs';
+    var key = 'AAAAS_v3mKY:APA91bFwiMOjlu7jhksmAWObgS067uLRU6OWdxZGM3E6WSnmX5DMVPv8mSgi-cdddbNV5eLEnoJfmoTvCVwli7I0Jlc-TQIO1PZyis1iiZKet89P5ZoU9TZvjxj-ck6gtYNMmRy_wzSc';
 
     console.log('Send notification', notification);
 
